@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div class="stats container">
+        <p>Fullness: @ViewBag.Fullness</p>
+        <p>Happiness: @ViewBag.Happiness</p>
+        <p>Energy: @ViewBag.Energy</p>
+        <p>Meals: @ViewBag.Meals</p>
+    </div>
+    <div class="messages">
+        <h3>@ViewBag.Message</h3>
+    </div>
+    <div class="actions container">
+        <form asp-action="Feed" method="GET">
+            <button type="submit">
+                Feed
+            </button>
+        </form>
+        <form asp-action="Play" method="GET">
+            <button type="submit">
+                Play
+            </button>
+        </form>
+        <form asp-action="Work" method="GET">
+            <button type="submit">
+                Work
+            </button>
+        </form>
+        <form asp-action="Sleep" method="GET">
+            <button type="submit">
+                Sleep
+            </button>
+        </form>
+    </div>
+</div>
